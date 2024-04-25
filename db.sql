@@ -1,0 +1,11 @@
+-- DROP TABLE IF EXISTS people
+
+-- CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT, lastname TEXT)
+
+-- CREATE TABLE IF NOT EXISTS test (id INTEGER PRIMARY KEY AUTOINCREMENT, test TEXT)
+
+-- INSERT INTO test (test) VALUES ('DB is running...');
+
+-- CREATE TABLE IF NOT EXISTS workouts (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, category TEST)
+
+INSERT INTO workouts VALUES (NULL, 'testing name', 'testing categories');

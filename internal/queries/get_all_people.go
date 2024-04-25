@@ -8,11 +8,11 @@ import (
 	_ "modernc.org/sqlite"
 )
 
-func GetAllPeople(){
-	database, _ := sql.Open("sqlite", "./test.sqlite3")
+func GetAllPeople() {
+	database, _ := sql.Open("sqlite", "./db.sqlite3")
 	rows, err := database.Query("SELECT id, firstname, lastname FROM people")
-	
-	if err !=nil{
+
+	if err != nil {
 		panic(err)
 	}
 
@@ -22,11 +22,10 @@ func GetAllPeople(){
 	var id int
 	var firstname string
 	var lastname string
-	
-	for rows.Next(){
-		rows.Scan(&id, &firstname, &lastname)
-		fmt.Println(strconv.Itoa(id), firstname + " " + lastname)
-	}
 
+	for rows.Next() {
+		rows.Scan(&id, &firstname, &lastname)
+		fmt.Println(strconv.Itoa(id), firstname+" "+lastname)
+	}
 
 }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/htmx.org@1.9.12"
+    integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <title>Hi</title>
+</head>
+
+<body>
+  <main class="container">
+    <button onclick="location.href='/';">Home</button>
+    <form>
+      <div>Workout Name:</div>
+      <input type="text" name="name" hx-post="/post-new-workout/">
+      <div>Type:</div>
+      <select name="category">
+        <option value="outdoor">Outdoor</option>
+        <option value="cardio">Cardio</option>
+        <option value="endurance">Endurance</option>
+        <option value="strength-training">Stregnth Training</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+
+</html>
